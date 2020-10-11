@@ -1,0 +1,3 @@
+gunicorn==20.0
+falcon==2.0.0
+jsonschema==2.6.0

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cloud-api-app-service
+spec:
+  selector:
+      app: cloud-api-app
+  ports:
+  - protocol: "TCP"
+    port: 8000
+    targetPort: 8000
+  type: NodePort # To make it accessible from outside, later if ingress or LoadBalancer is configured it can have ClusterIP
