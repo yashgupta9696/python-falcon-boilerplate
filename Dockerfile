@@ -8,6 +8,6 @@ COPY . /cloud_api
 WORKDIR /cloud_api
 
 # Install gunicorn & falcon
-RUN pip install --proxy=http://web-proxy.in.hpecorp.net:8080 -r requirements.txt
+RUN pip install -r requirements.txt
 
 CMD ["gunicorn", "-c", "etc/cloud_api/gunicorn.conf", "cloud_api.main:app"]
